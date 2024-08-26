@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className='bg-blue-600 p-4 shadow-md'>
       <div className='container mx-auto flex justify-between items-center'>
         <div className='text-xl font-bold text-white'>
-          <Link href='/'>UPRAVNIK</Link>
+          <Link href='/'>Profesionalni UPRAVNIK</Link>
         </div>
         <div className='space-x-4'>
           <Link href='/login'>
