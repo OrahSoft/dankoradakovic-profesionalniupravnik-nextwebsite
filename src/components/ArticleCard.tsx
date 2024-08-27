@@ -1,7 +1,4 @@
-interface Article {
-  title: string;
-  excerpt: string;
-}
+import type { Article } from 'src/types/article';
 
 interface ArticleCardProps {
   article: Article;

@@ -2,12 +2,7 @@ import { useEffect, useState } from 'react';
 import { Layout } from '@components/Layout';
 import { ArticleCard } from '@components/ArticleCard';
 
-interface Article {
-  id: string;
-  title: string;
-  content: string;
-  excerpt: string;
-}
+import { Article } from 'src/types/article';
 
 export default function Home() {
   const [articles, setArticles] = useState<Article[]>([]);
