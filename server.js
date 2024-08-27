@@ -8,6 +8,12 @@ const handle = app.getRequestHandler();
 app.prepare().then(() => {
   const server = express();
 
+  // Handle API routes separately
+  server.post('/api/logout', (req, res) => {
+    return handle(req, res);
+  });
+
+  // For all other GET requests
   server.get('*', (req, res) => {
     return handle(req, res);
   });
