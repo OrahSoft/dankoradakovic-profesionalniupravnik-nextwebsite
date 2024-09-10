@@ -1,11 +1,13 @@
+'use client';
+
 import Link from 'next/link';
 
-export const Navbar: React.FC = () => {
+export const Navbar = () => {
   const handleLogout = () => {
     fetch('/api/logout', { method: 'POST' })
       .then((response) => response.json())
       .then((data) => {
-        alert(data.message);
+        alert(data.success);
       })
       .catch((error) => {
         alert(error);

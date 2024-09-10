@@ -4,7 +4,7 @@ interface ArticleCardProps {
   article: Article;
 }
 
-export const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
+export const ArticleCard = ({ article }: ArticleCardProps) => {
   return (
     <div className="overflow-hidden rounded-lg bg-white shadow-lg transition-transform hover:scale-105">
       <div className="p-4">
