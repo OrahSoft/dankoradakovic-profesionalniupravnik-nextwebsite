@@ -1,18 +1,20 @@
+'use client';
+
 import Link from 'next/link';
 
-export const Navbar: React.FC = () => {
+export const Navbar = () => {
   const handleLogout = () => {
     fetch('/api/logout', { method: 'POST' })
       .then((response) => response.json())
       .then((data) => {
-        alert(data.message);
+        alert(data.success);
       })
       .catch((error) => {
         alert(error);
       });
   };
   return (
-    <nav className="bg-blue-600 p-4 shadow-md">
+    <nav className="bg-primaryBlue p-4 shadow-md">
       <div className="container mx-auto flex items-center justify-between">
         <div className="text-xl font-bold text-white">
           <Link href="/">

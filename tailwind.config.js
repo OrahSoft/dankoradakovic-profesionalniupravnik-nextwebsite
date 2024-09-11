@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './src/app/**/*.{js,ts,jsx,tsx}',
+    './src/components/**/*.{js,ts,jsx,tsx}',
+    './src/components/ArticlesBlock/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     screens: {
       xs: { max: '639px' },
@@ -16,10 +20,11 @@ module.exports = {
     extend: {
       colors: {
         primary: '#5C62F9',
+        primaryBlue: '#2563eb',
         mainGreen: '#35C89F',
         mainYellow: '#FFCC00',
         mainRed: '#F97F88',
-        red: '#F97F88',
+        red: '#FF0000',
         white: '#FFFFFF',
         black: '#01082D',
         gray80: '#343957',

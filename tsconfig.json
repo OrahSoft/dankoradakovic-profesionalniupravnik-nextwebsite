@@ -15,15 +15,22 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@api/*": ["src/pages/api/*"],
+      "@api/*": ["src/app/api/*"],
       "@components/*": ["src/components/*"],
-      "@pages/*": ["src/pages/*"],
+      "@pages/*": ["src/app/*"],
       "@styles/*": ["src/styles/*"],
       "@public/*": ["src/public/*"],
-      "@types/*": ["src/types/*"]
+      "@typesAndInterfaces/*": ["src/types/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@utils/*": ["src/utils/*"]
     },
-    "module": "esnext"
+    "module": "esnext",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
