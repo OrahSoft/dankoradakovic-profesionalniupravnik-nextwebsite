@@ -14,7 +14,7 @@ export const Navbar = () => {
       });
   };
   return (
-    <nav className="bg-blue-600 p-4 shadow-md">
+    <nav className="bg-primaryBlue p-4 shadow-md">
       <div className="container mx-auto flex items-center justify-between">
         <div className="text-xl font-bold text-white">
           <Link href="/">
