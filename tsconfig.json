@@ -22,7 +22,8 @@
       "@public/*": ["src/public/*"],
       "@typesAndInterfaces/*": ["src/types/*"],
       "@hooks/*": ["src/hooks/*"],
-      "@utils/*": ["src/utils/*"]
+      "@utils/*": ["src/utils/*"],
+      "@sanityConfig/*": ["src/sanity/*"]
     },
     "module": "esnext",
     "plugins": [
