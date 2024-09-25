@@ -1,8 +1,22 @@
-// 'use client';
-
-import { Article } from '@typesAndInterfaces/article';
+'use client';
 import { ArticleCard } from '@components/ArticleCard';
-export const ArticlesBlock = async ({ articles = [] }: { articles?: Article[] }) => {
+import fetchArticles from '@hooks/fetchArticles';
+import { Article } from '@typesAndInterfaces/article';
+import { useEffect, useState } from 'react';
+import Loader from '@components/ArticlesBlock/loader';
+export const ArticlesBlock = () => {
+  const [articles, setArticles] = useState<Article[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    fetchArticles().then((data) => {
+      setArticles(data);
+      setIsLoading(false);
+    });
+  }, []);
+
+  if (isLoading) return <Loader />;
+
   return (
     <div className="container mx-auto p-4">
       <h1 className="mb-8 text-center text-4xl font-bold">Articles</h1>
