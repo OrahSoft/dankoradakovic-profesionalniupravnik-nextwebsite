@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="sr">
-      <body className="min-h-[100vh] pb-[32px]">
+      <body className="min-h-screen pb-[32px]">
         <ReactQueryProvider>
           <Navbar />
           {children}
