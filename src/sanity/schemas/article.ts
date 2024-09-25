@@ -1,4 +1,4 @@
-export default {
+const article = {
   name: 'article',
   title: 'Article',
   type: 'document',
@@ -15,3 +15,5 @@ export default {
     },
   ],
 };
+
+export default article;

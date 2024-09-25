@@ -1,6 +1,11 @@
 'use client';
 
 import Link from 'next/link';
+import './Navbar.css';
+
+import LoginIcon from '@utils/LoginIcon';
+import LogoutIcon from '@utils/LogoutIcon';
+import RegisterIcon from '@utils/RegisterIcon';
 
 export const Navbar = () => {
   const handleLogout = () => {
@@ -14,7 +19,7 @@ export const Navbar = () => {
       });
   };
   return (
-    <nav className="bg-primaryBlue p-4 shadow-md">
+    <nav className="navbar bg-primaryBlue p-4 shadow-md">
       <div className="container mx-auto flex items-center justify-between">
         <div className="text-xl font-bold text-white">
           <Link href="/">
@@ -22,15 +27,15 @@ export const Navbar = () => {
           </Link>
         </div>
         <div className="space-x-4">
-          <Link href="/login">
-            <p className="text-white hover:text-gray-300">Login</p>
-          </Link>
-          <Link href="/register">
-            <p className="text-white hover:text-gray-300">Register</p>
+          <Link href="/login" title="Login">
+            <LoginIcon />
           </Link>
           <a onClick={handleLogout} className="cursor-pointer">
-            <p className="text-white hover:text-gray-300">Logout</p>
+            <LogoutIcon />
           </a>
+          <Link href="/register">
+            <RegisterIcon />
+          </Link>
         </div>
       </div>
     </nav>

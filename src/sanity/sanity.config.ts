@@ -1,11 +1,11 @@
-import { defineConfig } from 'sanity';
-import { deskTool } from 'sanity/desk';
 import { visionTool } from '@sanity/vision';
 import { schemaTypes } from '@sanityConfig/schemas';
+import { defineConfig } from 'sanity';
+import { deskTool } from 'sanity/desk';
 
 export default defineConfig({
-  projectId: '80ylmqzb', // Replace with your Sanity project ID
-  dataset: 'production', // Replace with your dataset
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
   title: 'Sanity Studio',
   apiVersion: '2023-10-05', // Latest version
   basePath: '/admin', // The path where Sanity Studio will be accessible

@@ -1,8 +1,8 @@
-import './globals.css';
 import ReactQueryProvider from '@utils/ReactQueryProvider';
+import './globals.css';
 
-import { Navbar } from '@components/Navbar';
 import { Footer } from '@components/Footer';
+import { Navbar } from '@components/Navbar';
 
 export const metadata = {
   title: 'Danko Radakovic Profesionalni Upravnik',
@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="sr">
-      <body>
+      <body className="min-h-[100vh] pb-[32px]">
         <ReactQueryProvider>
           <Navbar />
           {children}

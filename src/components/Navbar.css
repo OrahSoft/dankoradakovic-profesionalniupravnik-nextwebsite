@@ -1,0 +1,8 @@
+.navbar a {
+  display: inline-block;
+}
+
+.navbar a svg {
+  display: inline-block;
+  vertical-align: middle;
+}

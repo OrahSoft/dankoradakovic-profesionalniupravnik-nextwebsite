@@ -15,6 +15,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
   return (
     <html lang="en">
+      <head>
+        <meta name="robots" content="noindex, nofollow" />
+      </head>
       <body>
         {/* Admin-specific layout components */}
         {children}
